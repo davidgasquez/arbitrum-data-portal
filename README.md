@@ -1,2 +1,3 @@
-# arbitrum-data-portal
-⛓️ Open Data Hub for Arbitrum
+# Arbitrum Data Portal ⛓️
+
+Open Data Hub for Arbitrum.

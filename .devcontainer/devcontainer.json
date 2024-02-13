@@ -1,0 +1,41 @@
+{
+	"name": "Arbitrum Data Portal",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+	"containerEnv": {
+		"DAGSTER_HOME": "/tmp"
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.analysis.autoImportCompletions": true,
+				"python.analysis.typeCheckingMode": "basic",
+				"[python]": {
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.fixAll": "explicit",
+						"source.organizeImports": "explicit"
+					},
+					"editor.defaultFormatter": "charliermarsh.ruff"
+				},
+				"notebook.formatOnSave.enabled": true,
+				"notebook.codeActionsOnSave": {
+					"source.fixAll": true,
+					"source.organizeImports": true
+				}
+			},
+			"extensions": [
+				"charliermarsh.ruff",
+				"EditorConfig.EditorConfig",
+				"ms-python.isort",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.datawrangler",
+				"ms-toolsai.jupyter",
+				"redhat.vscode-yaml",
+				"tamasfe.even-better-toml",
+				"VisualStudioExptTeam.vscodeintellicode"
+			]
+		}
+	},
+	"postCreateCommand": "pip install -e '.[dev]'"
+}

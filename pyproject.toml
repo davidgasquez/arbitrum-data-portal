@@ -1,0 +1,42 @@
+[project]
+name = "adp"
+version = "1.0.0"
+authors = [{ name = "David Gasquez" }]
+dependencies = [
+    "dagster-duckdb",
+    "dagster",
+    "duckdb",
+    "ipykernel",
+    "polars",
+    "pyarrow",
+    "regex",
+]
+
+requires-python = ">=3.10, <3.13"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://davidgasquez.github.io/arbitrum-data-portal/"
+Changelog = "https://github.com/davidgasquez/arbitrum-data-portal/commits/main/"
+Issues = "https://github.com/davidgasquez/arbitrum-data-portal/issues"
+CI = "https://github.com/davidgasquez/arbitrum-data-portal/actions"
+
+[project.optional-dependencies]
+dev = ["dagit", "ruff"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["adp"]
+
+[tool.sqlfmt]
+line_length = 120
+check = true
+fast = false
+dialect = "duckdb"
+
+[tool.dagster]
+module_name = "adp"
