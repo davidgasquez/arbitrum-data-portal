@@ -1,27 +1,12 @@
 import polars as pl
 import requests
-from dagster import MaterializeResult, MetadataValue, asset
-
-from .resources import DuckDBResource
+from dagster import asset
 
 
 @asset
-def raw_discourse_categories(duckdb: DuckDBResource) -> MaterializeResult:
+def raw_discourse_categories() -> pl.DataFrame:
     url = "https://forum.arbitrum.foundation/categories.json"
     response = requests.get(url)
     response.raise_for_status()
     data = response.json()
-    df = pl.DataFrame(data["category_list"]["categories"])
-    with duckdb.get_connection() as conn:
-        conn.cursor().execute(
-            """
-            create or replace table raw_discourse_categories
-            as
-            select * from df
-            """
-        )
-    return MaterializeResult(
-        metadata={
-            "rows": MetadataValue.int(df.shape[0]),
-        }
-    )
+    return pl.DataFrame(data["category_list"]["categories"])

@@ -3,6 +3,7 @@ name = "adp"
 version = "1.0.0"
 authors = [{ name = "David Gasquez" }]
 dependencies = [
+    "dagster-duckdb-polars",
     "dagster-duckdb",
     "dagster",
     "duckdb",
