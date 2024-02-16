@@ -20,7 +20,8 @@ jobs:
         python-version: 3.11
         cache: pip
 
+    - name: Install dependencies
+      run: pip install -e .
+
     - name: Run
-      run: |
-        make setup
-        make run
+      run: make run
