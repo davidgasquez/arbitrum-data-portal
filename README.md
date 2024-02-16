@@ -1,6 +1,6 @@
 # ⛓️ Arbitrum Data Portal
 
-Open Data Platform for Arbitrum. This goal with this portal is to improve data access and empower data scientists to conduct research that drives the community forward.
+Open Data Platform for Arbitrum. The goal with this portal is to improve data access and empower data scientists to conduct research that drives the community forward.
 
 ## 🛠️ Contributing
 
