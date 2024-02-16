@@ -26,7 +26,6 @@
 			"extensions": [
 				"charliermarsh.ruff",
 				"EditorConfig.EditorConfig",
-				"ms-python.isort",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"ms-toolsai.datawrangler",
@@ -37,5 +36,5 @@
 			]
 		}
 	},
-	"postCreateCommand": "pip install -e '.[dev]'"
+	"postCreateCommand": "make setup"
 }

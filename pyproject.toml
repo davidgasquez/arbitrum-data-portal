@@ -41,3 +41,8 @@ dialect = "duckdb"
 
 [tool.dagster]
 module_name = "adp"
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+combine-as-imports = true
+length-sort = true
