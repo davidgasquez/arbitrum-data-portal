@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := run
 
 run:
-	dagster job execute -j datasets
+	dagster asset list -m adp
 
 dev:
 	dagster dev
