@@ -6,7 +6,7 @@ dependencies = [
     "dagster-duckdb-polars",
     "dagster-duckdb",
     "dagster",
-    "duckdb",
+    "duckdb==0.10.0",
     "ipykernel",
     "polars",
     "pyarrow",

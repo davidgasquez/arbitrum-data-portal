@@ -7,6 +7,7 @@ Open Data Platform for Arbitrum. The goal with this portal is to improve data ac
 This project is in active development. You can help by giving ideas, answering questions, reporting bugs, proposing enhancements, improving the documentation, and fixing bugs. Feel free to open issues and pull requests!
 
 Some ways you can contribute to this project:
+
 - Adding new data sources.
 - Improving the data quality of existing datasets.
 - Adding tests to the data pipelines.
